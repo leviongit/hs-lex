@@ -1,0 +1,42 @@
+cabal-version:      3.6
+name:               hs-lex
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+-- license:
+author:             leviongit
+maintainer:         levi.duncan.self@gmail.com
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+executable hs-lex
+  main-is:          Main.hs
+
+  -- LANGUAGE extensions used by modules in this package.
+  -- other-extensions:
+  build-depends:    base ^>=4.15.1.0
+                  , pretty-simple >= 4.0
+                  , case-insensitive
+                  , hs-lex
+  default-language: Haskell2010
+  ghc-options:      -Wall -fPIC
+
+library
+  build-depends:      base >= 4.15.1.0
+                    , case-insensitive
+  exposed-modules:    Lexer
+                    , Parser
+  hs-source-dirs:     src
+  ghc-options:        -Wall -fPIC
